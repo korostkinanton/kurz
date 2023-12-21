@@ -1,4 +1,6 @@
 #include "mdfile.h"
+#include "Server.h"
+#include "error.h"
 int main(int argc, char *argv[]) {
     if(argc == 1){
         cout << "калькулятор суммы векторов "  << endl;
@@ -43,21 +45,29 @@ int main(int argc, char *argv[]) {
         break;
         }
         }
-        if(er(file_name, file_error)==12){
-            cout<<"Ошибка открытия файла"<<endl;
-            return 1;
+        fstream file;
+    	file.exceptions(ifstream::badbit | ifstream::failbit);
+        try{
+        	file.open(file_name);
+        }catch(const exception & ex){
+        	string error = "error open file";
+        	return 1;
         }
-            Server Server;
+        Error er(file_error);
+            Server Server(er);
 
-            int s = Server.self_addr(error, file_error, port);
+            int s = Server.self_addr(error, port);
             while(true) {
                 
-                int work_sock = Server.client_addr(s, error, file_error);
+                int work_sock = Server.client_addr(s, error);
 
-                    autorized(work_sock, file_name, file_error);    
-                    math(work_sock);
-                
+                    Server.autorized(work_sock, file_name);    
+                    Server.math(work_sock);
+            }
+			
+		             
             
-    }
+    	
+        
     return 0;
 }

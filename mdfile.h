@@ -1,3 +1,4 @@
+#pragma once
 #include <netinet/in.h>
 #include <iostream>
 #include <cassert>
@@ -18,18 +19,14 @@ using namespace CryptoPP;
 using namespace std;
 #include <cryptopp/md5.h> // MD%, для другого алгоритма - другой заголовочный файл
 string MD(string sah);
-void errors(string error, string name);
+//void errors(string error, string name);
 int er(string file_name, string file_error);
 void msgsend(int work_sock, string mess);
 int autorized(int work_sock, string file_name, string file_error);
-class Server{
-private:
 
-public:
-int self_addr(string error, string file_error, int port);
-int client_addr(int s, string error, string file_error);
-};
 
 int math(int work_sock);
+
+
 
 

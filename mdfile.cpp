@@ -1,6 +1,8 @@
-#include "mdfile.h"
 
-int Server::self_addr(string error, string file_error, int port){
+#include "mdfile.h"
+#include "Server.h"
+#include "error.h"
+int Server::self_addr(string error, int port){
     int s = socket(AF_INET, SOCK_STREAM, 0);
     sockaddr_in * self_addr = new (sockaddr_in);
     self_addr->sin_family = AF_INET;
@@ -11,21 +13,21 @@ int Server::self_addr(string error, string file_error, int port){
         if(b == -1) {
             cout << "Binding error\n";
             error = "error binding";
-            errors(error, file_error);
+            er.errors(error);
             return 1;
             }
     listen(s, SOMAXCONN);
 return s;
 }
 
-int Server::client_addr(int s, string error, string file_error){
+int Server::client_addr(int s, string error){
     sockaddr_in * client_addr = new sockaddr_in;
     socklen_t len = sizeof (sockaddr_in);
     int work_sock = accept(s, (sockaddr*)(client_addr), &len);
     if(work_sock == -1) {
         cout << "Error #2\n";
         error = "error #2";
-        errors(error, file_error);
+        er.errors(error);
         return 1;
     }
     else {
@@ -35,7 +37,7 @@ int Server::client_addr(int s, string error, string file_error){
     }
     }
 
-int autorized(int work_sock, string file_name, string file_error){
+int Server::autorized(int work_sock, string file_name){
 
         string ok = "OK";
         string salt = "1111111111111111";
@@ -57,7 +59,7 @@ int autorized(int work_sock, string file_name, string file_error){
             if(message != login){
     msgsend(work_sock,  err);
     error = "Ошибка логина";
-    errors(error, file_error);
+    er.errors(error);
     close(work_sock);
     return 1;
             }else{
@@ -74,7 +76,7 @@ int autorized(int work_sock, string file_name, string file_error){
     cout << H << endl;
     msgsend(work_sock,  err);
     error = "Ошибка пароля";
-    errors(error, file_error);
+    er.errors(error);
     close(work_sock);
     return 1;
             }else{
@@ -98,9 +100,9 @@ Weak::MD5 hash;
     StringSource(sah, true,  new HashFilter(hash, new HexEncoder(new StringSink(digest))));  // строка-приемник
       return digest;
  }
-void errors(string error, string name){
+void Error::errors(string& error){
     ofstream file;
-    file.open(name, ios::app);
+    file.open(err_file, ios::app);
     if(file.is_open()){
         time_t seconds = time(NULL);
         tm* timeinfo = localtime(&seconds);
@@ -108,20 +110,9 @@ void errors(string error, string name){
         cout << "error: " << error << endl;
     }
 }
-int er(string file_name, string file_error){
-        fstream file;
-        file.exceptions(ifstream::badbit | ifstream::failbit);
-        try{
-        file.open(file_name);
-        return 1;
-        }catch(const exception & ex){
-        string error = "error open file";
-        errors(error, file_error);
-        return 12;
-        }
-        }
 
-int math(int work_sock){
+
+int Server::math(int work_sock){
     uint32_t kolvo;
     uint32_t numb;
     uint64_t vect;
