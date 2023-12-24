@@ -1,0 +1,8 @@
+*
+!*.cpp
+!Makefile
+!.gitignore
+!*.txt
+!*.h
+!*.cppp
+!Doxyfile
