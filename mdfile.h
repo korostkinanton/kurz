@@ -1,3 +1,10 @@
+/** @file mdfile.h
+ * @author Коросткин А.П.
+ * @version 1.0
+ * @date 22.12.2023
+ * @copyright ИБСТ ПГУ
+ * @brief file mdfile.h 
+ */
 #pragma once
 #include <netinet/in.h>
 #include <iostream>

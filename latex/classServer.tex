@@ -1,0 +1,50 @@
+\hypertarget{classServer}{}\doxysection{Класс Server}
+\label{classServer}\index{Server@{Server}}
+
+
+Класс с методами для сервера  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer_a22e0a06f0af2bc2310ccf7891d1f03cd}\label{classServer_a22e0a06f0af2bc2310ccf7891d1f03cd}} 
+int \mbox{\hyperlink{classServer_a22e0a06f0af2bc2310ccf7891d1f03cd}{self\+\_\+addr}} (string error, int port)
+\begin{DoxyCompactList}\small\item\em Объявляется функция self\+\_\+addr в классе \mbox{\hyperlink{classServer}{Server}}. Функция ожидает два параметра\+: строку error и целочисленный port, и возвращает целочисленное значение. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_ab221bfa7978961e67d9583d8f2b43167}\label{classServer_ab221bfa7978961e67d9583d8f2b43167}} 
+int \mbox{\hyperlink{classServer_ab221bfa7978961e67d9583d8f2b43167}{client\+\_\+addr}} (int s, string error)
+\begin{DoxyCompactList}\small\item\em Объявляется функция client\+\_\+addr в классе \mbox{\hyperlink{classServer}{Server}}. Функция ожидает два параметра\+: строку error и целочисленный s, и возвращает целочисленное значение. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_a72c8e47e180053f9e651c0556bb34b41}\label{classServer_a72c8e47e180053f9e651c0556bb34b41}} 
+int \mbox{\hyperlink{classServer_a72c8e47e180053f9e651c0556bb34b41}{autorized}} (int work\+\_\+sock, string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Объявляется функция autorized в классе \mbox{\hyperlink{classServer}{Server}}. Функция ожидает два параметра\+: строку file\+\_\+name и целочисленный work\+\_\+sock, и возвращает целочисленное значение. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_a2b9ffce2d797d83b9793fbc8e73a1ebc}\label{classServer_a2b9ffce2d797d83b9793fbc8e73a1ebc}} 
+int \mbox{\hyperlink{classServer_a2b9ffce2d797d83b9793fbc8e73a1ebc}{math}} (int work\+\_\+sock)
+\begin{DoxyCompactList}\small\item\em Объявляется функция autorized в классе math. Функция ожидает целочисленный параметр work\+\_\+sock, и возвращает целочисленное значение. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer_a96ceaeca5764bd606bb6f4822ae8cd09}{Server}} (\mbox{\hyperlink{classError}{Error}} \&wer)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classServer}{Server}}, который инициализирует поле er объектом типа \mbox{\hyperlink{classError}{Error}} по ссылке. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс с методами для сервера 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classServer_a96ceaeca5764bd606bb6f4822ae8cd09}\label{classServer_a96ceaeca5764bd606bb6f4822ae8cd09}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classError}{Error}} \&}]{wer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор класса \mbox{\hyperlink{classServer}{Server}}, который инициализирует поле er объектом типа \mbox{\hyperlink{classError}{Error}} по ссылке. 
+
+Конструктор принимает ссылку на объект типа \mbox{\hyperlink{classError}{Error}} и использует её для инициализации поля er. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Server_8h}{Server.\+h}}\item 
+\mbox{\hyperlink{mdfile_8cpp}{mdfile.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classError}{}\doxysection{Класс Error}
+\label{classError}\index{Error@{Error}}
+
+
+Класс описания ошибок  
+
+
+
+
+{\ttfamily \#include $<$error.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classError_a78cae53a326789d4dcd1ce67f06851dc}{Error}} (const string \&error)
+\begin{DoxyCompactList}\small\item\em Kонструктор класса \mbox{\hyperlink{classError}{Error}}, который инициализирует поля err\+\_\+file и err\+Message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classError_aa6bf70d55eb8911e8c9d04187936c213}{Error}} (const \mbox{\hyperlink{classError}{Error}} \&name)
+\begin{DoxyCompactList}\small\item\em Kонструктор копирования класса \mbox{\hyperlink{classError}{Error}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classError_a9cb0a2b5ce736e319b3f4fa914e9ad91}\label{classError_a9cb0a2b5ce736e319b3f4fa914e9ad91}} 
+void \mbox{\hyperlink{classError_a9cb0a2b5ce736e319b3f4fa914e9ad91}{errors}} (string \&error)
+\begin{DoxyCompactList}\small\item\em объявление функции errors в классе \mbox{\hyperlink{classError}{Error}}. Функция ожидает один параметр -\/ ссылку на объект типа string с именем error и не возвращает никакого значения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс описания ошибок 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classError_a78cae53a326789d4dcd1ce67f06851dc}\label{classError_a78cae53a326789d4dcd1ce67f06851dc}} 
+\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Error\+::\+Error (\begin{DoxyParamCaption}\item[{const string \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Kонструктор класса \mbox{\hyperlink{classError}{Error}}, который инициализирует поля err\+\_\+file и err\+Message. 
+
+Конструктор принимает константную ссылку на объект типа string и использует её для инициализации поля err\+\_\+file. Поле err\+Message инициализируется пустой строкой. \mbox{\Hypertarget{classError_aa6bf70d55eb8911e8c9d04187936c213}\label{classError_aa6bf70d55eb8911e8c9d04187936c213}} 
+\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Error\+::\+Error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classError}{Error}} \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Kонструктор копирования класса \mbox{\hyperlink{classError}{Error}}. 
+
+Конструктор копирования принимает ссылку на объект типа \mbox{\hyperlink{classError}{Error}} и использует её для инициализации поля err\+\_\+file. Таким образом, он создает новый объект \mbox{\hyperlink{classError}{Error}}, который является копией существующего объекта \mbox{\hyperlink{classError}{Error}}, используя значение поля err\+\_\+file из переданного объекта. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{error_8h}{error.\+h}}\item 
+\mbox{\hyperlink{mdfile_8cpp}{mdfile.\+cpp}}\end{DoxyCompactItemize}

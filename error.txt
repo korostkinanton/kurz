@@ -4,3 +4,43 @@
 
 Ошибка логина:Sun Oct 29 13:30:25 2023
 
+error binding:Fri Dec 22 19:46:53 2023
+
+error #2:Fri Dec 22 19:46:53 2023
+
+Ошибка логина:Fri Dec 22 19:49:22 2023
+
+Ошибка пароля:Fri Dec 22 19:51:02 2023
+
+error binding:Fri Dec 22 19:54:49 2023
+
+error #2:Fri Dec 22 19:54:49 2023
+
+error binding:Sat Dec 23 12:50:02 2023
+
+error #2:Sat Dec 23 12:50:02 2023
+
+Ошибка логина:Sat Dec 23 13:03:24 2023
+
+error binding:Sat Dec 23 18:46:25 2023
+
+error #2:Sat Dec 23 18:46:25 2023
+
+Ошибка логина:Sat Dec 23 19:09:02 2023
+
+error binding:Sat Dec 23 19:09:24 2023
+
+error #2:Sat Dec 23 19:09:24 2023
+
+error binding:Sat Dec 23 19:09:26 2023
+
+error #2:Sat Dec 23 19:09:26 2023
+
+error binding:Sat Dec 23 19:09:40 2023
+
+error #2:Sat Dec 23 19:09:40 2023
+
+error binding:Sat Dec 23 19:09:57 2023
+
+error #2:Sat Dec 23 19:09:57 2023
+

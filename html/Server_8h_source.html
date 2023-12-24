@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл Server.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Server.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Server_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mdfile_8h.html">mdfile.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8h.html">error.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classServer.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="classError.html">Error</a>&amp; er;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classServer.html#a22e0a06f0af2bc2310ccf7891d1f03cd">self_addr</a>(<span class="keywordtype">string</span> error, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classServer.html#ab221bfa7978961e67d9583d8f2b43167">client_addr</a>(<span class="keywordtype">int</span> s, <span class="keywordtype">string</span> error);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classServer.html#a72c8e47e180053f9e651c0556bb34b41">autorized</a>(<span class="keywordtype">int</span> work_sock, <span class="keywordtype">string</span> file_name);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classServer.html#a2b9ffce2d797d83b9793fbc8e73a1ebc">math</a>(<span class="keywordtype">int</span> work_sock);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classServer.html#a96ceaeca5764bd606bb6f4822ae8cd09">   56</a></span>&#160;<a class="code" href="classServer.html#a96ceaeca5764bd606bb6f4822ae8cd09">Server</a>(<a class="code" href="classError.html">Error</a>&amp; wer):er(wer){};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//Server() : er() {}</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="ttc" id="aclassError_html"><div class="ttname"><a href="classError.html">Error</a></div><div class="ttdoc">Класс описания ошибок</div><div class="ttdef"><b>Definition:</b> error.h:16</div></div>
+<div class="ttc" id="aclassServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">Класс с методами для сервера</div><div class="ttdef"><b>Definition:</b> Server.h:16</div></div>
+<div class="ttc" id="aclassServer_html_a22e0a06f0af2bc2310ccf7891d1f03cd"><div class="ttname"><a href="classServer.html#a22e0a06f0af2bc2310ccf7891d1f03cd">Server::self_addr</a></div><div class="ttdeci">int self_addr(string error, int port)</div><div class="ttdoc">Объявляется функция self_addr в классе Server. Функция ожидает два параметра: строку error и целочисл...</div><div class="ttdef"><b>Definition:</b> mdfile.cpp:12</div></div>
+<div class="ttc" id="aclassServer_html_a2b9ffce2d797d83b9793fbc8e73a1ebc"><div class="ttname"><a href="classServer.html#a2b9ffce2d797d83b9793fbc8e73a1ebc">Server::math</a></div><div class="ttdeci">int math(int work_sock)</div><div class="ttdoc">Объявляется функция autorized в классе math. Функция ожидает целочисленный параметр work_sock,...</div><div class="ttdef"><b>Definition:</b> mdfile.cpp:122</div></div>
+<div class="ttc" id="aclassServer_html_a72c8e47e180053f9e651c0556bb34b41"><div class="ttname"><a href="classServer.html#a72c8e47e180053f9e651c0556bb34b41">Server::autorized</a></div><div class="ttdeci">int autorized(int work_sock, string file_name)</div><div class="ttdoc">Объявляется функция autorized в классе Server. Функция ожидает два параметра: строку file_name и цело...</div><div class="ttdef"><b>Definition:</b> mdfile.cpp:47</div></div>
+<div class="ttc" id="aclassServer_html_a96ceaeca5764bd606bb6f4822ae8cd09"><div class="ttname"><a href="classServer.html#a96ceaeca5764bd606bb6f4822ae8cd09">Server::Server</a></div><div class="ttdeci">Server(Error &amp;wer)</div><div class="ttdoc">Конструктор класса Server, который инициализирует поле er объектом типа Error по ссылке.</div><div class="ttdef"><b>Definition:</b> Server.h:56</div></div>
+<div class="ttc" id="aclassServer_html_ab221bfa7978961e67d9583d8f2b43167"><div class="ttname"><a href="classServer.html#ab221bfa7978961e67d9583d8f2b43167">Server::client_addr</a></div><div class="ttdeci">int client_addr(int s, string error)</div><div class="ttdoc">Объявляется функция client_addr в классе Server. Функция ожидает два параметра: строку error и целочи...</div><div class="ttdef"><b>Definition:</b> mdfile.cpp:30</div></div>
+<div class="ttc" id="aerror_8h_html"><div class="ttname"><a href="error_8h.html">error.h</a></div><div class="ttdoc">Файл с классом Error.</div></div>
+<div class="ttc" id="amdfile_8h_html"><div class="ttname"><a href="mdfile_8h.html">mdfile.h</a></div><div class="ttdoc">file mdfile.h</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

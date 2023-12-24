@@ -1,7 +1,14 @@
-
+/** @file mdfile.cpp
+ * @author Коросткин А.П.
+ * @version 1.0
+ * @date 22.12.2023
+ * @copyright ИБСТ ПГУ
+ * @brief file mdfile.cpp 
+ */
 #include "mdfile.h"
 #include "Server.h"
 #include "error.h"
+#include "interface.h"
 int Server::self_addr(string error, int port){
     int s = socket(AF_INET, SOCK_STREAM, 0);
     sockaddr_in * self_addr = new (sockaddr_in);
